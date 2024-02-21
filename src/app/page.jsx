@@ -29,7 +29,7 @@ const Homepage = () => {
           <button className="p-4 rounded-lg ring-1 ring-black">Contact Me</button>
         </div>
       </div>
-    </div>;
+    </div>
   </motion.div>
 )};
 
