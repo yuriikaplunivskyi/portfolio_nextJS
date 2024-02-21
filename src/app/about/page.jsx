@@ -26,7 +26,7 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className='h-full overflow-scroll lg:flex' ref={containerRef}>
       {/* TEXT  CONTAINER*/}
-        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:1/2'>
+        <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2'>
           {/* BIOGRAPHY CONTAINER */}
           <div 
             className='flex flex-col gap-12 justify-center'
@@ -161,7 +161,7 @@ const AboutPage = () => {
               transition={{delay: 0.2}}
               className='pb-10'>
               {/* EXPERIENCE LIST ITEM*/}
-              <div className='flex justify-between h-48'>
+              <div className='flex justify-between h-fit sm:h-48 p-0'>
                 {/* LEFT */}
                 <div className='w-1/3'>
                   {/* JOB TITLE */}
@@ -188,7 +188,7 @@ const AboutPage = () => {
                 
               </div>
               {/* EXPERIENCE LIST ITEM*/}
-              <div className='flex justify-between h-48'>
+              <div className='flex justify-between h-fit sm:h-48 p-0'>
                 {/* LEFT */}
                 <div className='w-1/3 '></div>
                 {/* CENTER */}
@@ -212,7 +212,7 @@ const AboutPage = () => {
                 </div>
               </div>
               {/* EXPERIENCE LIST ITEM*/}
-              <div className='flex justify-between h-48'>
+              <div className='flex justify-between h-fit sm:h-48 p-0'>
                 {/* LEFT */}
                 <div className='w-1/3'>
                   {/* JOB TITLE */}
@@ -239,7 +239,7 @@ const AboutPage = () => {
           </div>
         </div>
       {/* SVF  CONTAINER*/}
-        <div className=' w-full opacity-20 -z-1 sticky bottom-0  lg:opacity-100 xl:1/2 lg:block lg:top-0  lg:w-1/3 lg:z-30 xl:1/2'>
+        <div className='opacity-20 sticky bottom-0 right-0 lg:opacity-100 xl:1/2 lg:block lg:top-0  lg:w-1/3 lg:z-30 xl:1/2'>
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
