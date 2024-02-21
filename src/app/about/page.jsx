@@ -159,7 +159,7 @@ const AboutPage = () => {
               initial={{x:"500px", opacity: 0}}
               animate={isExperienceRefInView ? {x:"0", opacity: 1} : {}}
               transition={{delay: 0.2}}
-              className=''>
+              className='pb-10'>
               {/* EXPERIENCE LIST ITEM*/}
               <div className='flex justify-between h-48'>
                 {/* LEFT */}
@@ -239,7 +239,7 @@ const AboutPage = () => {
           </div>
         </div>
       {/* SVF  CONTAINER*/}
-        <div className='block opacity-20 sticky bottom-0  lg:opacity-100 xl:1/2 lg:block lg:top-0  lg:w-1/3 lg:z-30 xl:1/2'>
+        <div className='opacity-20 sticky bottom-0  lg:opacity-100 xl:1/2 lg:block lg:top-0  lg:w-1/3 lg:z-30 xl:1/2'>
           <Brain scrollYProgress={scrollYProgress}/>
         </div>
       </div>
