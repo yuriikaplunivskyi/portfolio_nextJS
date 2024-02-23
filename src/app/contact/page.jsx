@@ -69,7 +69,7 @@ const ContactPage = () => {
           <span>Yurii</span>
           <textarea  
             rows={6} 
-            className="bg-transparent border-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />
           <span>My email address is:</span>
