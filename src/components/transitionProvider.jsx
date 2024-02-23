@@ -5,12 +5,14 @@ import Navbar from "./navbar";
 import {motion} from "framer-motion";
 import { usePathname } from "next/navigation";
 
+
+
 const TransitionProvider = ({children}) => {
 
   const pathName = usePathname();
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName} className="w-screen h-screen overflow-hidden bg-gradient-to-b from-blue-50 to-red-100">
+      <div key={pathName} className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-100">
 
         <motion.div className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
         animate={{height: "0vh"}}
@@ -27,7 +29,7 @@ const TransitionProvider = ({children}) => {
           {pathName.substring(1)}
         </motion.div>
 
-        <motion.div className="h-screen w-screen fixed bg-black rounded-t-[100px] mb-0 z-30"
+        <motion.div className="h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30"
         initial={{height: "140vh"}}
         animate={{height: "0vh", transition:{ delay: 0.5 }}}
         />
