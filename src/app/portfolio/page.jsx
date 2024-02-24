@@ -8,7 +8,7 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
+    color: "from-pink-300 to-green-300",
     title: "Nutritionist",
     descr: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit possimus numquam temporibus! Numquam obcaecati eligendi provident ullam odit eius minus iusto reiciendis quisquam rerum veniam, omnis ducimus repellat, soluta aliquid?",
     img:"/hwBoq5K.png",
@@ -16,11 +16,11 @@ const items = [
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
+    color: "from-green-300 to-violet-300",
     title: "Nutritionist",
     descr: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit possimus numquam temporibus! Numquam obcaecati eligendi provident ullam odit eius minus iusto reiciendis quisquam rerum veniam, omnis ducimus repellat, soluta aliquid?",
-    img:"/hwBoq5K.png",
-    link: "https://kateryna-kaplunivska.com.ua/"
+    img:"/omg-sfsf.png",
+    link: "https://omg-repair.com/"
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const PortfolioPage = () => {
         <div className='w-screen h-[calc(100dvh-5rem)] sm:h-[calc(100dvh-6rem)] flex items-center justify-center text-8xl text-center'>My Works</div>
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x:x }} className='flex'>
-            <div className='h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300'></div>
+            <div className='h-screen w-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-pink-300'></div>
             {items.map(item=>(
               <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} 
               key={item.id}

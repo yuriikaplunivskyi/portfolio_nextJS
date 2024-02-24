@@ -33,14 +33,14 @@ const ContactPage = () => {
 
   return (
     <motion.div 
-      className="h-full" 
+      className="h-full overflow-scroll sm:h-full" 
       initial={{ y: "-200vh" }} 
       animate={{y: "0%"}} 
       transition={{ duration: 1}}
     >
-      <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+      <div className='h-full flex flex-col gap-2 lg:gap-2 lg:flex-row px-2 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="xl:h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-4xl sm:text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -63,7 +63,7 @@ const ContactPage = () => {
         <form 
           ref={form} 
           onSubmit={sendEmail} 
-          className=' h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-4'
+          className=' lg:h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-8 lg:p-24'
         >
           <span>Yurii</span>
           <textarea  
