@@ -35,28 +35,30 @@ const items = [
 const PortfolioPage = () => {
 
   const ref = useRef();
+  const containerRef = useRef();
 
-  const {scrollYProgress} = useScroll({ target:ref});
+  const {scrollYProgress} = useScroll({container:containerRef, target:ref});
   const x = useTransform( scrollYProgress, [ 0, 1 ], ["0%", "-75%"] );
   
   
   return (
     <motion.div 
-    className="h-full " 
+    className="h-full overflow-scroll" 
     initial={{ y: "-200vh" }} 
     animate={{y: "0%"}} 
     transition={{ duration: 1}}
+    ref={containerRef}
     >
       <div className='h-[500vh] relative ' ref={ref}>
-        <div className='w-screen h-[calc(100dvh-5rem)] sm:h-[calc(100dvh-6rem)] flex items-center justify-center text-8xl text-center'>My Works</div>
+        <div className='w-screen  h-[calc(100dvh-5rem)] sm:h-[calc(100dvh-6rem)] flex items-center justify-center text-8xl text-center'>My Works</div>
         <div className='sticky top-0 flex h-screen gap-4 items-center overflow-hidden'>
           <motion.div style={{ x:x }} className='flex'>
             <div className='h-screen w-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-pink-300'></div>
             {items.map(item=>(
-              <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} 
+              <div className={`h-full w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} 
               key={item.id}
               >
-                <div className='flex flex-col gap-8 text-white'>
+                <div className='flex flex-col gap-.5 justify-start lg:gap-6 text-white'>
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">{item.title}</h1>
                   <div className='relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]'>
                     <Image src={item.img} style={{objectFit: "contain"}} fill alt="screenshot web site" />

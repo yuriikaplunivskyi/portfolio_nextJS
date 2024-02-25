@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en" style={{ height: '-webkit-fill-available'}}>
+    <html lang="en" style={{ height: '-webkit-fill-available', overflow: 'hidden'}}>
       <body className={inter.className} >
         <TransitionProvider>
           {children}
